@@ -1,0 +1,14 @@
+---
+- hosts: spine
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Add Vlans
+    eos_config:
+#      backup: yes
+      src: intfvlan.j2
+      provider: "{{ eos_connection }}"
+    when: ansible_network_os == 'eos'
+    register: result
+  - debug: var=result

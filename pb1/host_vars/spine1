@@ -1,0 +1,8 @@
+intfvlans:
+  - id: 100
+    desc: dbservers
+  - id: 200
+    desc: webservers
+  - id: 300
+    desc: emailservers
+

@@ -1,0 +1,10 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+    - name: delete vlans
+      eos_config:
+        src: del-vlan.j2
+        provider: "{{ eos_connection }}"

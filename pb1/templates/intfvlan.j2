@@ -1,0 +1,5 @@
+{% for vlan in intfvlans %}
+interface vlan {{ vlan.id }}
+   description {{ vlan.desc }}
+   no shutdown
+{% endfor %}
