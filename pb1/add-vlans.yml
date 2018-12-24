@@ -6,7 +6,6 @@
   tasks:
   - name: Add Vlans
     eos_config:
-#      backup: yes
       src: intfvlan.j2
       provider: "{{ eos_connection }}"
     when: ansible_network_os == 'eos'
